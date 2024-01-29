@@ -1,3 +1,4 @@
+
 # Loan Approval Automation Project
 
 This project aims to automate the loan approval processes of financial institutions, thereby reducing the turnaround time for loan requests and removing biases. The objective is to create a machine learning model that accurately predicts loan approvals, optimizing the decision-making process.
@@ -39,47 +40,54 @@ This project aims to automate the loan approval processes of financial instituti
   - Precision: 0.8172
   - Recall: 0.9048
   - Accuracy: 0.8521
+  - F1-Score: 0.8588
   - Offers a well-balanced performance, suitable for accurate loan approval decisions.
 
 - **Random Forest with Randomized Search:**
   - Precision: 0.7917
   - Recall: 0.9048
   - Accuracy: 0.8343
+  - F1-Score: 0.8478
   - Provides a good balance between precision, recall, and accuracy.
 
 - **Decision Tree with Randomized Search:**
   - Precision: 0.7647
   - Recall: 0.7738
   - Accuracy: 0.7692
+  - F1-Score: 0.7647
   - Shows decent performance but slightly lower than Random Forest.
 
 - **SVC with GridSearchCV:**
   - Precision: 0.5031
   - Recall: 0.9762
   - Accuracy: 0.5089
+  - F1-Score: 0.6639
   - High recall but low precision, may not be suitable for loan approval where precision is crucial.
 
 - **GaussianNB:**
   - Precision: 0.6907
   - Recall: 0.7976
   - Accuracy: 0.7219
+  - F1-Score: 0.7403
   - Provides moderate performance, but precision and recall are not as high as other models.
 
 - **Stacking Model:**
   - Precision: 0.733
   - Recall: 0.75
+  - Accuracy: 0.7515
+  - F1-Score: 0.7407
   - Commendable performance, but XGBoost outperforms in overall accuracy and balanced trade-off.
 
 ## Model Recommendation
 
-Considering the importance of both minimizing false positives and false negatives in loan approval decisions, the XGBoost Classifier emerges as the recommended algorithm. With its high precision and recall, XGBoost provides a well-balanced and effective solution for the specific challenges posed by loan prediction scenarios.
+Considering the importance of both minimizing false positives and false negatives in loan approval decisions, the XGBoost Classifier emerges as the recommended algorithm. With its high precision, recall, accuracy, and F1-Score, XGBoost provides a well-balanced and effective solution for the specific challenges posed by loan prediction scenarios.
 
 ## Hyperparameter Tuning and Comparison
 
-The hyperparameter-tuned Random Forest narrows the performance gap but does not surpass the XGBoost Classifier, which maintains a slightly better accuracy and precision. The final decision between the two models should consider factors such as computational efficiency, interpretability, and specific application goals.
+The hyperparameter-tuned Random Forest narrows the performance gap but does not surpass the XGBoost Classifier, which maintains a slightly better accuracy, precision, recall, and F1-Score. The final decision between the two models should consider factors such as computational efficiency, interpretability, and specific application goals.
 
 ## Conclusion
 
-In the context of predicting loan approvals, precision and recall are pivotal. After thorough evaluation, the XGBoost Classifier demonstrates superior performance, making it the recommended algorithm for ensuring accurate and well-balanced loan approval decisions.
+In the context of predicting loan approvals, precision, recall, accuracy, and F1-Score are pivotal. After thorough evaluation, the XGBoost Classifier demonstrates superior performance, making it the recommended algorithm for ensuring accurate and well-balanced loan approval decisions.
 
 Feel free to explore the provided Jupyter Notebook (`loan_approval_prediction.ipynb`) for the detailed implementation and analysis. Contributions for further improvements are welcome!
